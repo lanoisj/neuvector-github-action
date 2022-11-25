@@ -1,0 +1,19 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Scan Remote Image
+        uses: bashofmann/neuvector-image-scan-action@main
+        with:
+          image-registry: docker.io
+          image-registry-username: ${{ secrets.DOCKER_USERNAME }}
+          image-registry-password: ${{ secrets.DOCKER_PASSWORD }}
+          image-repository: rk90229
