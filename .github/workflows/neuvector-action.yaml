@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Scan Remote Image
-        uses: bashofmann/neuvector-image-scan-action@main
+        uses: rajeshkio/neuvector-image-scan-action@main
         with:
           image-registry: https://registry.hub.docker.com
           image-registry-username: ${{ secrets.DOCKER_USERNAME }}
