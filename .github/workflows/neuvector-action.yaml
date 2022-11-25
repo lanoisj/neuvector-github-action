@@ -24,8 +24,8 @@ jobs:
           image-registry-password: ${{ secrets.DOCKER_PASSWORD }}
           image-repository: rk90229/count-user-visits
           image-tag: latest
-    job2:
-      runs-on: ubuntu-latest
-      needs: build
-      steps:
-        - run: echo ${{needs.build.outputs.output1}} ${{needs.build.outputs.output2}} ${{needs.build.outputs.output3}}
+  job2:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - run: echo ${{needs.build.outputs.output1}} ${{needs.build.outputs.output2}} ${{needs.build.outputs.output3}}
