@@ -16,4 +16,5 @@ jobs:
           image-registry: docker.io
           image-registry-username: ${{ secrets.DOCKER_USERNAME }}
           image-registry-password: ${{ secrets.DOCKER_PASSWORD }}
-          image-repository: rk90229/count-user-visits:tagname
+          image-repository: rk90229/count-user-visits
+          image-tag: latest
